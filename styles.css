@@ -1,123 +1,118 @@
-/* General Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-}
-
-/* Header Styles */
-.chanel-header {
-    position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('background-image.jpg') no-repeat center center/cover;
-    color: white;
-    text-align: center;
-    padding: 50px 0;
-}
-
-.chanel-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.chanel-nav a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
-
-.profile-container {
-    max-width: 500px;
-    margin: auto;
-    text-align: center;
-}
-
-.profile-photo {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    margin-bottom: 20px;
-}
-
-/* Section Styles */
-.chanel-section {
-    padding: 50px;
-    margin: 30px 0;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.chanel-section h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 2em;
-    color: #000;
-}
-
-/* Grid Styles for Content Organization */
-.education-grid, .experience-grid, .publications-grid, .awards-grid, .more-about-me-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.education-item, .experience-item, .publication-item, .award-item, .more-about-me-item {
-    background: #fafafa;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.awards-grid p {
-    margin: 0;
-    text-align: center;
-}
-
-.more-about-me-item h3 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
-/* Button Styles */
-.btn {
-    display: inline-block;
-    background: #000;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background 0.3s ease;
-    text-align: center;
-}
-
-.btn:hover {
-    background: #444;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .chanel-header {
-        padding: 30px 0;
-    }
-
-    .profile-photo {
-        width: 120px;
-        height: 120px;
-    }
-
-    .chanel-section {
-        padding: 30px;
-    }
-
-    .chanel-nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
+     body {
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-image: url('background-image.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            color: white;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 0;
+            border-bottom: 2px solid #ccc;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 15px;
+            display: block;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #000;
+        }
+        .profile-container {
+            text-align: center;
+            padding: 50px 0;
+        }
+        .profile-container img {
+            border-radius: 50%;
+            border: 5px solid white;
+            width: 150px;
+            height: 150px;
+        }
+        .profile-container h1 {
+            margin: 20px 0 10px;
+            font-size: 2.5em;
+        }
+        .profile-container p {
+            font-size: 1.2em;
+        }
+        section {
+            padding: 50px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+        }
+        section p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+        section a {
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        section a:hover {
+            color: #555;
+        }
+        /* Dynamic interactions */
+        nav ul li a {
+            position: relative;
+        }
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: #333;
+            transition: width 0.3s, left 0.3s;
+        }
+        nav ul li a:hover::after {
+            width: 100%;
+            left: 0;
+        }
+        section h2 {
+            position: relative;
+            animation: fadeInDown 1s ease-out;
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
