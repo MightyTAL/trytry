@@ -1,155 +1,123 @@
+/* General Styles */
 body {
-            font-family: 'Playfair Display', serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        header {
-            background-image: url('background-image.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 400px;
-            position: relative;
-            text-align: center;
-            color: white;
-        }
-        .overlay {
-            background-color: rgba(0, 0, 0, 0.6);
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333;
-            position: sticky;
-            top: 0;
-        }
-        nav ul li {
-            float: left;
-        }
-        nav ul li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-        nav ul li a:hover {
-            background-color: #111;
-        }
-        .profile-container {
-            position: relative;
-            top: 150px;
-            z-index: 1;
-        }
-        .profile-container img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            margin-bottom: 10px;
-            border: 5px solid white;
-        }
-        h1, h2 {
-            font-weight: 700;
-        }
-        section {
-            padding: 50px 15%;
-            background-color: white;
-            margin: 20px 0;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
-        .link-highlight {
-            background-color: #f0f0f0;
-            padding: 5px 10px;
-            border-radius: 5px;
-            text-decoration: none;
-            color: #333;
-            transition: background-color 0.3s;
-        }
-        .link-highlight:hover {
-            background-color: #ddd;
-        }
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 1s ease-out forwards;
-        }
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
-</head>
-<body>
-
-/* New Typography */
-body {
-    font-family: 'Playfair Display', serif;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Arial', sans-serif;
     color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
 }
 
-/* Accent Color for Links */
-a.link-highlight {
-    color: #007BFF;
-    background-color: transparent;
-    text-decoration: underline;
-}
-a.link-highlight:hover {
-    color: #0056b3;
-    background-color: #f8f9fa;
-    text-decoration: none;
+/* Header Styles */
+.chanel-header {
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('background-image.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
 }
 
-/* Awards Section - Grid Layout */
-.awards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+.chanel-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
     gap: 20px;
 }
-.award-item {
-    padding: 15px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+.chanel-nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.profile-container {
+    max-width: 500px;
+    margin: auto;
     text-align: center;
 }
 
-/* Hover Effects */
-nav ul li a:hover, .link-highlight:hover {
-    background-color: #007BFF;
-    color: white;
-    transition: 0.3s;
+.profile-photo {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
 }
 
-/* Mobile Responsiveness */
+/* Section Styles */
+.chanel-section {
+    padding: 50px;
+    margin: 30px 0;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.chanel-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #000;
+}
+
+/* Grid Styles for Content Organization */
+.education-grid, .experience-grid, .publications-grid, .awards-grid, .more-about-me-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.education-item, .experience-item, .publication-item, .award-item, .more-about-me-item {
+    background: #fafafa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.awards-grid p {
+    margin: 0;
+    text-align: center;
+}
+
+.more-about-me-item h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    background: #000;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    text-align: center;
+}
+
+.btn:hover {
+    background: #444;
+}
+
+/* Responsive Design */
 @media screen and (max-width: 768px) {
-    section {
-        padding: 20px 5%;
+    .chanel-header {
+        padding: 30px 0;
     }
-    .profile-container {
-        top: 100px;
+
+    .profile-photo {
+        width: 120px;
+        height: 120px;
     }
-    .awards-grid {
-        grid-template-columns: 1fr;
+
+    .chanel-section {
+        padding: 30px;
     }
-    nav ul {
+
+    .chanel-nav ul {
         flex-direction: column;
-    }
-    nav ul li {
-        width: 100%;
-    }
-    nav ul li a {
-        padding: 10px;
+        gap: 10px;
     }
 }
