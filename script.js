@@ -1,12 +1,14 @@
 function toggleContent(id) {
     var content = document.getElementById(id);
-    var button = content.previousElementSibling;
-
+    var toggleIcon = content.previousElementSibling.querySelector('.toggle-icon');
+    
     if (content.style.display === "none" || content.style.display === "") {
         content.style.display = "block";
-        button.textContent = "Read Less [-]";
+        toggleIcon.textContent = "[-]";
+        toggleIcon.classList.add('expanded');
     } else {
         content.style.display = "none";
-        button.textContent = "Read More [+]";
+        toggleIcon.textContent = "[+]";
+        toggleIcon.classList.remove('expanded');
     }
 }
