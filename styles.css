@@ -176,4 +176,56 @@ body {
     margin-top: 10px;
     color: #444;
 }
+/* Module Separation */
+.module {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+/* Experience and About Items */
+.experience-item, .about-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Title Styles */
+.experience-title, .about-title {
+    cursor: pointer;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+/* Hover Effects */
+.experience-title:hover, .about-title:hover {
+    color: #007BFF;
+}
+
+/* Content Hidden by Default */
+.experience-content, .about-content {
+    display: none; /* Hidden by default */
+    margin-top: 10px;
+    color: #444;
+}
+
+/* Toggle Icon */
+.toggle-icon {
+    font-weight: bold;
+    color: #666;
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.toggle-icon.expanded {
+    transform: rotate(45deg);
+    color: #007BFF;
+}
 }
