@@ -62,13 +62,13 @@ body {
 }
 
 /* Grid Styles for Content Organization */
-.education-grid, .experience-grid, .publications-grid, .awards-grid, .more-about-me-grid {
+.education-grid, .experience-grid, .publications-grid, .awards-grid, {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
 
-.education-item, .publication-item, .award-item, .more-about-me-item {
+.education-item, .publication-item, .award-item, {
     background: #fafafa;
     padding: 20px;
     border-radius: 8px;
@@ -78,11 +78,6 @@ body {
 .awards-grid p {
     margin: 0;
     text-align: center;
-}
-
-.more-about-me-item h3 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
 }
 
 /* Button Styles */
@@ -149,4 +144,30 @@ body {
 .research-content ul {
     list-style-type: disc;
     padding-left: 20px;
+}
+/* Styles for More About Me Section */
+.about-item {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.about-title {
+    cursor: pointer;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.about-title:hover {
+    color: #007BFF;
+}
+
+.about-content {
+    display: none; /* Hidden by default */
+    margin-top: 10px;
+    color: #444;
 }
