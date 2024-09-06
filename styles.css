@@ -62,7 +62,7 @@ body {
 }
 
 /* Grid Styles for Content Organization */
-.education-grid, .experience-grid, .publications-grid, .awards-grid, {
+.education-grid, .publications-grid, .awards-grid, {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
