@@ -29,6 +29,9 @@ body {
     text-decoration: none;
     color: white;
     font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .profile-container {
@@ -309,4 +312,30 @@ body {
     .education-grid, .publications-grid, .awards-grid {
         grid-template-columns: 1fr;
     }
+/* Navigation Hover Effect */
+.chanel-nav a:hover {
+    background: rgba(255, 255, 255, 0.2); /* Light overlay */
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3); /* Subtle glow effect */
+    transform: scale(1.1); /* Slight enlargement */
+}
+
+/* Highlight Active Section */
+.chanel-nav a.active {
+    background: #ffcc00; /* Highlight active section */
+    color: #333;
+}
+/* Contact Section */
+#contact {
+    text-align: center;
+    line-height: 1.6;
+}
+
+#contact a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}    
 }
