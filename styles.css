@@ -87,51 +87,35 @@ body {
     color: #000;
 }
 
-/* Modules Styles */
-.module {
-    padding: 20px;
+/* Sub-modules Styles */
+.chanel-section .experience-item, 
+.chanel-section .education-item, 
+.chanel-section .publication-item, 
+.chanel-section .award-item {
     background-color: #f9f9f9;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.module:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-}
-
-.module h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #000;
-    text-align: center;
-}
-
-.module p {
-    font-size: 1.2em;
-    text-align: center;
-    line-height: 1.6;
-}
-
-/* Grid Styles for Content */
-.photo-grid, .blog-grid, .education-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-/* Image Grid Styling */
-.photo-grid img, .blog-grid img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.photo-grid img:hover, .blog-grid img:hover {
+.chanel-section .experience-item:hover, 
+.chanel-section .education-item:hover, 
+.chanel-section .publication-item:hover, 
+.chanel-section .award-item:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Sub-modules Grid Layout */
+.chanel-section .experience-grid, 
+.chanel-section .education-grid, 
+.chanel-section .publications-grid, 
+.chanel-section .awards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
 /* Button Highlight */
@@ -153,23 +137,12 @@ body {
     transform: scale(1.1);
 }
 
-/* Button for Specific Highlight */
-.btn.highlight {
-    background: #ffcc00;
-    color: #333;
-    border: 2px solid transparent;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-.btn.highlight:hover {
-    border-color: #333;
-    transform: scale(1.1);
-}
-
 /* Responsive Design */
 @media screen and (max-width: 768px) {
-    .photo-grid, .blog-grid {
+    .chanel-section .experience-grid, 
+    .chanel-section .education-grid, 
+    .chanel-section .publications-grid, 
+    .chanel-section .awards-grid {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
 
@@ -189,7 +162,10 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
-    .photo-grid, .blog-grid {
+    .chanel-section .experience-grid, 
+    .chanel-section .education-grid, 
+    .chanel-section .publications-grid, 
+    .chanel-section .awards-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
