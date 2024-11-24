@@ -87,27 +87,7 @@ body {
     color: #000;
 }
 
-/* Grid Layouts */
-.education-grid, .experience-grid, .publications-grid, .awards-grid, .more-about-me-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.education-item, .experience-item, .publication-item, .award-item, .more-about-me-item {
-    background: #fafafa;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.education-item:hover, .experience-item:hover, .publication-item:hover, .award-item:hover, .more-about-me-item:hover {
-    transform: scale(1.03);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* Highlight Buttons */
+/* Button Highlight */
 .btn {
     display: inline-block;
     background: #000;
@@ -115,20 +95,23 @@ body {
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
-    transition: background 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+    transition: all 0.3s ease;
     text-align: center;
 }
 
 .btn:hover {
-    background: gray;
-    transform: scale(1.05);
+    background: #ffcc00;
+    color: #333;
+    transform: scale(1.1);
 }
 
+/* Button for Specific Highlight */
 .btn.highlight {
     background: #ffcc00;
     color: #333;
-    font-weight: bold;
     border: 2px solid transparent;
+    font-weight: bold;
     transition: all 0.3s ease;
 }
 
@@ -137,8 +120,22 @@ body {
     transform: scale(1.1);
 }
 
-/* Photo Grid Styles */
-.photo-grid {
+/* Link Styles */
+a.email-link {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a.email-link:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+    text-decoration: underline;
+}
+
+/* Grid Styles for Content Sections */
+.photo-grid, .education-grid, .experience-grid, .publications-grid, .awards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
@@ -156,7 +153,7 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Blog Section Styles */
+/* Blog Section */
 .blog-item {
     display: flex;
     flex-direction: column;
@@ -188,14 +185,6 @@ body {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
 
-    .blog-item {
-        padding: 20px;
-    }
-
-    .blog-image {
-        max-width: 100%;
-    }
-
     .chanel-nav ul {
         flex-direction: column;
         align-items: center;
@@ -206,11 +195,6 @@ body {
         padding: 30px 0;
     }
 
-    .profile-photo {
-        width: 120px;
-        height: 120px;
-    }
-
     .chanel-section {
         padding: 30px;
     }
@@ -219,10 +203,5 @@ body {
 @media screen and (min-width: 1200px) {
     .photo-grid {
         grid-template-columns: repeat(3, 1fr);
-    }
-
-    .module {
-        max-width: 80%;
-        margin: 0 auto;
     }
 }
