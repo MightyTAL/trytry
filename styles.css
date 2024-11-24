@@ -87,6 +87,20 @@ body {
     color: #000;
 }
 
+/* Modules Styles */
+.module {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.module:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
 /* Button Highlight */
 .btn {
     display: inline-block;
@@ -134,8 +148,8 @@ a.email-link:hover {
     text-decoration: underline;
 }
 
-/* Grid Styles for Content Sections */
-.photo-grid, .education-grid, .experience-grid, .publications-grid, .awards-grid {
+/* Grid Styles for Photography and Blog */
+.photo-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
@@ -153,30 +167,12 @@ a.email-link:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Blog Section */
-.blog-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-.blog-image {
-    width: 100%;
-    max-width: 600px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.blog-image:hover {
-    transform: scale(1.03);
-}
-
-.blog-item p {
+/* Blog Styles */
+.blog-text {
     font-size: 1.2em;
     text-align: center;
     line-height: 1.6;
+    margin-bottom: 20px;
 }
 
 /* Responsive Design */
