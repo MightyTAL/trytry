@@ -87,11 +87,11 @@ body {
     color: #000;
 }
 
-/* Sub-modules Styles */
-.chanel-section .experience-item, 
-.chanel-section .education-item, 
-.chanel-section .publication-item, 
-.chanel-section .award-item {
+/* Sub-modules Styles (Directly from HTML structure) */
+.experience-item, 
+.education-item, 
+.publication-item, 
+.award-item {
     background-color: #f9f9f9;
     border-radius: 10px;
     padding: 20px;
@@ -100,19 +100,19 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.chanel-section .experience-item:hover, 
-.chanel-section .education-item:hover, 
-.chanel-section .publication-item:hover, 
-.chanel-section .award-item:hover {
+.experience-item:hover, 
+.education-item:hover, 
+.publication-item:hover, 
+.award-item:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Sub-modules Grid Layout */
-.chanel-section .experience-grid, 
-.chanel-section .education-grid, 
-.chanel-section .publications-grid, 
-.chanel-section .awards-grid {
+/* Grid Layout for Sub-modules */
+.experience-grid, 
+.education-grid, 
+.publications-grid, 
+.awards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
@@ -137,12 +137,26 @@ body {
     transform: scale(1.1);
 }
 
+/* Button for Specific Highlight */
+.btn.highlight {
+    background: #ffcc00;
+    color: #333;
+    border: 2px solid transparent;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn.highlight:hover {
+    border-color: #333;
+    transform: scale(1.1);
+}
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
-    .chanel-section .experience-grid, 
-    .chanel-section .education-grid, 
-    .chanel-section .publications-grid, 
-    .chanel-section .awards-grid {
+    .experience-grid, 
+    .education-grid, 
+    .publications-grid, 
+    .awards-grid {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
 
@@ -162,10 +176,10 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
-    .chanel-section .experience-grid, 
-    .chanel-section .education-grid, 
-    .chanel-section .publications-grid, 
-    .chanel-section .awards-grid {
+    .experience-grid, 
+    .education-grid, 
+    .publications-grid, 
+    .awards-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
