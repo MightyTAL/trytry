@@ -101,6 +101,39 @@ body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
+.module h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #000;
+    text-align: center;
+}
+
+.module p {
+    font-size: 1.2em;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Grid Styles for Content */
+.photo-grid, .blog-grid, .education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Image Grid Styling */
+.photo-grid img, .blog-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-grid img:hover, .blog-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
 /* Button Highlight */
 .btn {
     display: inline-block;
@@ -134,50 +167,9 @@ body {
     transform: scale(1.1);
 }
 
-/* Link Styles */
-a.email-link {
-    color: #007BFF;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-a.email-link:hover {
-    color: #ffcc00;
-    transform: scale(1.1);
-    text-decoration: underline;
-}
-
-/* Grid Styles for Photography and Blog */
-.photo-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-.photo-grid img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.photo-grid img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Blog Styles */
-.blog-text {
-    font-size: 1.2em;
-    text-align: center;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
 /* Responsive Design */
 @media screen and (max-width: 768px) {
-    .photo-grid {
+    .photo-grid, .blog-grid {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
 
@@ -197,7 +189,7 @@ a.email-link:hover {
 }
 
 @media screen and (min-width: 1200px) {
-    .photo-grid {
+    .photo-grid, .blog-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
