@@ -6,6 +6,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photography & Blog - Aoling Tang</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* CSS 内联以便预览 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 20px 10px;
+        }
+
+        .chanel-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .chanel-nav ul li {
+            display: inline;
+        }
+
+        .chanel-nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .chanel-nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        h1, h2 {
+            margin: 10px 0;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            padding: 16px;
+        }
+
+        .photo-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .photo-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .photo-item:hover img {
+            transform: scale(1.1);
+        }
+
+        footer {
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+    </style>
 </head>
 
 <body>
@@ -29,30 +112,46 @@
         <h2>Photography</h2>
         <p>Discover my favorite photography collections:</p>
         <div class="photo-grid">
-            <a href="photo1.jpg" class="photo-item landscape" target="_blank" rel="noopener noreferrer">
-                <img src="photo1.jpg" alt="Photo 1">
-            </a>
-            <a href="photo2.jpg" class="photo-item cityscape" target="_blank" rel="noopener noreferrer">
-                <img src="photo2.jpg" alt="Photo 2">
-            </a>
-            <a href="photo3.jpg" class="photo-item abstract" target="_blank" rel="noopener noreferrer">
-                <img src="photo3.jpg" alt="Photo 3">
-            </a>
-            <a href="photo4.jpg" class="photo-item landscape" target="_blank" rel="noopener noreferrer">
-                <img src="photo4.jpg" alt="Photo 4">
-            </a>
-            <a href="photo5.jpg" class="photo-item cityscape" target="_blank" rel="noopener noreferrer">
-                <img src="photo5.jpg" alt="Photo 5">
-            </a>
-            <a href="photo6.jpg" class="photo-item abstract" target="_blank" rel="noopener noreferrer">
-                <img src="photo6.jpg" alt="Photo 6">
-            </a>
-            <a href="photo7.jpg" class="photo-item abstract" target="_blank" rel="noopener noreferrer">
-                <img src="photo7.jpg" alt="Photo 7">
-            </a>
-            <a href="photo8.jpg" class="photo-item abstract" target="_blank" rel="noopener noreferrer">
-                <img src="photo8.jpg" alt="Photo 8">
-            </a>
+            <div class="photo-item landscape">
+                <a href="photo1.jpg" target="_blank" rel="noopener noreferrer">
+                    <img src="photo1.jpg" alt="Photo 1">
+                </a>
+            </div>
+            <div class="photo-item cityscape">
+                <a href="photo2.jpg" target="_blank" rel="noopener noreferrer">
+                    <img src="photo2.jpg" alt="Photo 2">
+                </a>
+            </div>
+            <div class="photo-item abstract">
+                <a href="photo3.jpg" target="_blank" rel="noopener noreferrer">
+                    <img src="photo3.jpg" alt="Photo 3">
+                </a>
+            </div>
+            <div class="photo-item landscape">
+                <a href="photo4.jpg" target="_blank" rel="noopener noreferrer">
+                    <img src="photo4.jpg" alt="Photo 4">
+                </a>
+            </div>
+            <div class="photo-item cityscape">
+                <a href="photo5.jpg" target="_blank" rel="noopener noreferrer">
+                    <img src="photo5.jpg" alt="Photo 5">
+                </a>
+            </div>
+            <div class="photo-item abstract">
+                <a href="photo6.jpg" target="_blank" rel="noopener noreferrer">
+                    <img src="photo6.jpg" alt="Photo 6">
+                </a>
+            </div>
+            <div class="photo-item abstract">
+                <a href="photo7.jpg" target="_blank" rel="noopener noreferrer">
+                    <img src="photo7.jpg" alt="Photo 7">
+                </a>
+            </div>
+            <div class="photo-item abstract">
+                <a href="photo8.jpg" target="_blank" rel="noopener noreferrer">
+                    <img src="photo8.jpg" alt="Photo 8">
+                </a>
+            </div>
         </div>
     </section>
 
@@ -72,16 +171,16 @@
                     <a href="autumn1.jpg" target="_blank" rel="noopener noreferrer">
                         <img src="autumn1.jpg" alt="">
                     </a>
-                     <a href="autumn2.jpg" target="_blank" rel="noopener noreferrer">
+                    <a href="autumn2.jpg" target="_blank" rel="noopener noreferrer">
                         <img src="autumn2.jpg" alt="">
                     </a>
-                     <a href="autumn3.jpg" target="_blank" rel="noopener noreferrer">
+                    <a href="autumn3.jpg" target="_blank" rel="noopener noreferrer">
                         <img src="autumn3.jpg" alt="">
                     </a>
-                     <a href="autumn4.jpg" target="_blank" rel="noopener noreferrer">
+                    <a href="autumn4.jpg" target="_blank" rel="noopener noreferrer">
                         <img src="autumn4.jpg" alt="">
                     </a>
-                     <a href="autumn5.jpg" target="_blank" rel="noopener noreferrer">
+                    <a href="autumn5.jpg" target="_blank" rel="noopener noreferrer">
                         <img src="autumn5.jpg" alt="">
                     </a>
                 </div>
