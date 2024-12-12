@@ -7,18 +7,22 @@
     <title>Photography & Blog - Aoling Tang</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* CSS 内联以便预览 */
+  /* 全局样式 */
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Helvetica Neue", Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
         }
 
         header {
             text-align: center;
-            background-color: #333;
+            background-color: #000;
             color: white;
             padding: 20px 10px;
+            font-family: "Helvetica Neue", sans-serif;
+            letter-spacing: 2px;
         }
 
         .chanel-nav ul {
@@ -38,6 +42,8 @@
             color: white;
             text-decoration: none;
             font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
         }
 
         .chanel-nav ul li a:hover {
@@ -46,24 +52,41 @@
 
         h1, h2 {
             margin: 10px 0;
+            font-weight: normal;
+            letter-spacing: 1px;
         }
 
-        .photo-grid {
+        h2 {
+            font-size: 24px;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* 图片网格布局 */
+        .photo-grid, .blog-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 16px;
             padding: 16px;
         }
 
-        .photo-item {
+        .photo-item, .blog-item {
             position: relative;
             overflow: hidden;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: #fff;
         }
 
-        .photo-item img {
+        .photo-item img, .blog-item img {
             width: 100%;
             height: 100%;
             aspect-ratio: 1 / 1;
@@ -71,22 +94,22 @@
             transition: transform 0.3s ease;
         }
 
-        .photo-item:hover {
+        .photo-item:hover, .blog-item:hover {
             transform: translateY(-5px);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
 
-        .photo-item:hover img {
+        .photo-item:hover img, .blog-item:hover img {
             transform: scale(1.1);
         }
 
         footer {
             text-align: center;
-            background-color: #f4f4f4;
+            background-color: #000;
+            color: white;
             padding: 20px;
             margin-top: 20px;
             font-size: 0.9rem;
-            color: #555;
         }
     </style>
 </head>
@@ -106,6 +129,7 @@
             <p>Explore my photography work and life!</p>
         </div>
     </header>
+
 
     <!-- Photography Section -->
     <section id="photography" class="chanel-section">
@@ -158,33 +182,38 @@
     <!-- Blog Section -->
     <section id="blog" class="chanel-section">
         <h2>Blog</h2>
-        <div class="blog-content">
-            <article class="blog-entry">
-                <div class="blog-text">
-                    <h3>Autumn in Beijing</h3>
-                    <p>The sixth autumn in Beijing, and also the last one. Because of the "rush" of daily life, I only managed to capture the autumn scenery on the way to and from the teaching building and the library.</p>
-                </div>
-                <div class="blog-images">
-                    <a href="autumn.jpg" target="_blank" rel="noopener noreferrer">
-                        <img src="autumn.jpg" alt="">
-                    </a>
-                    <a href="autumn1.jpg" target="_blank" rel="noopener noreferrer">
-                        <img src="autumn1.jpg" alt="">
-                    </a>
-                    <a href="autumn2.jpg" target="_blank" rel="noopener noreferrer">
-                        <img src="autumn2.jpg" alt="">
-                    </a>
-                    <a href="autumn3.jpg" target="_blank" rel="noopener noreferrer">
-                        <img src="autumn3.jpg" alt="">
-                    </a>
-                    <a href="autumn4.jpg" target="_blank" rel="noopener noreferrer">
-                        <img src="autumn4.jpg" alt="">
-                    </a>
-                    <a href="autumn5.jpg" target="_blank" rel="noopener noreferrer">
-                        <img src="autumn5.jpg" alt="">
-                    </a>
-                </div>
-            </article>
+        <p>My thoughts, stories, and moments captured:</p>
+        <div class="blog-grid">
+            <div class="blog-item">
+                <a href="autumn.jpg" target="_blank" rel="noopener noreferrer">
+                    <img src="autumn.jpg" alt="Autumn in Beijing">
+                </a>
+            </div>
+            <div class="blog-item">
+                <a href="autumn1.jpg" target="_blank" rel="noopener noreferrer">
+                    <img src="autumn1.jpg" alt="Autumn in Beijing">
+                </a>
+            </div>
+            <div class="blog-item">
+                <a href="autumn2.jpg" target="_blank" rel="noopener noreferrer">
+                    <img src="autumn2.jpg" alt="Autumn in Beijing">
+                </a>
+            </div>
+            <div class="blog-item">
+                <a href="autumn3.jpg" target="_blank" rel="noopener noreferrer">
+                    <img src="autumn3.jpg" alt="Autumn in Beijing">
+                </a>
+            </div>
+            <div class="blog-item">
+                <a href="autumn4.jpg" target="_blank" rel="noopener noreferrer">
+                    <img src="autumn4.jpg" alt="Autumn in Beijing">
+                </a>
+            </div>
+            <div class="blog-item">
+                <a href="autumn5.jpg" target="_blank" rel="noopener noreferrer">
+                    <img src="autumn5.jpg" alt="Autumn in Beijing">
+                </a>
+            </div>
         </div>
     </section>
 
